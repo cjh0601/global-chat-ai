@@ -143,7 +143,7 @@ const Index = () => {
                     { icon: "📦", label: "3000个", desc: "SPU商品支持" },
                     { icon: "🏪", label: "不限", desc: "店铺数量" },
                     { icon: "🌍", label: "30+", desc: "语言翻译" },
-                    { icon: "🔗", label: "全平台", desc: "消息聚合" },
+                    { icon: "🔗", label: "5大平台", desc: "DHgate/Shopee/Lazada/Ozon/Daraz" },
                     { icon: "🤖", label: "7×24h", desc: "AI值守" },
                   ].map((item, index) => (
                     <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-white/10 backdrop-blur-sm">

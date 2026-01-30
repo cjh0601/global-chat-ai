@@ -1,4 +1,5 @@
-import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
+import { Phone, Mail, MapPin } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -10,10 +11,7 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4">
-              <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center">
-                <MessageCircle className="w-5 h-5" />
-              </div>
-              <span className="text-xl font-bold">跨境聚聊</span>
+              <img src={logo} alt="跨境聚聊AI版" className="h-10" />
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               为跨境电商卖家提供智能客服解决方案，
@@ -81,7 +79,7 @@ const Footer = () => {
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li className="flex items-center gap-2">
                 <Phone className="w-4 h-4" />
-                <span>400-888-8888</span>
+                <span>17359196071</span>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-4 h-4" />

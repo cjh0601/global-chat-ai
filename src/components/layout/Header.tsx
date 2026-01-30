@@ -1,8 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { MessageCircle, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import logo from "@/assets/logo.png";
 
 interface HeaderProps {
   variant?: "default" | "festival" | "tech";
@@ -30,19 +31,11 @@ const Header = ({ variant = "default" }: HeaderProps) => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2 group">
-            <div className={cn(
-              "w-10 h-10 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110",
-              variant === "festival" ? "gradient-festival" : 
-              variant === "tech" ? "gradient-tech" : "gradient-accent"
-            )}>
-              <MessageCircle className="w-5 h-5 text-primary-foreground" />
-            </div>
-            <span className="text-xl font-bold text-foreground">
-              跨境<span className={cn(
-                variant === "festival" ? "text-gradient-festival" : 
-                variant === "tech" ? "text-gradient-primary" : "text-gradient-accent"
-              )}>聚聊</span>
-            </span>
+            <img 
+              src={logo} 
+              alt="跨境聚聊AI版" 
+              className="h-10 transition-transform group-hover:scale-105" 
+            />
           </Link>
 
           {/* Desktop CTA */}
