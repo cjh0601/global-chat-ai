@@ -22,35 +22,74 @@ const Index = () => {
       <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
           {/* Luna春节形象 - 左侧 */}
-          <motion.div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10" initial={{
-          opacity: 0,
-          x: -100
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.3,
-          type: "spring",
-          stiffness: 80
-        }}>
-            
+          <motion.div 
+            className="hidden lg:block absolute left-4 xl:left-12 top-1/2 -translate-y-1/2 w-40 xl:w-56 z-10" 
+            initial={{ opacity: 0, x: -100, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
+          >
+            <motion.img 
+              src={lunaSpringLeft} 
+              alt="Luna新春形象"
+              className="w-full h-auto drop-shadow-2xl"
+              animate={{ 
+                y: [0, -12, 0],
+                rotate: [-2, 2, -2]
+              }}
+              transition={{ 
+                duration: 3, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+            />
+            {/* 红包飘落动画 */}
+            <motion.div 
+              className="absolute -top-4 -right-2 text-3xl"
+              animate={{ 
+                y: [0, 8, 0],
+                rotate: [0, 10, 0],
+                scale: [1, 1.1, 1]
+              }}
+              transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
+            >
+              🧧
+            </motion.div>
           </motion.div>
 
           {/* Luna春节形象 - 右侧 */}
-          <motion.div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10" initial={{
-          opacity: 0,
-          x: 100
-        }} animate={{
-          opacity: 1,
-          x: 0
-        }} transition={{
-          duration: 0.8,
-          delay: 0.5,
-          type: "spring",
-          stiffness: 80
-        }}>
-            
+          <motion.div 
+            className="hidden lg:block absolute right-4 xl:right-12 top-1/2 -translate-y-1/2 w-40 xl:w-56 z-10" 
+            initial={{ opacity: 0, x: 100, scale: 0.8 }}
+            animate={{ opacity: 1, x: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 80 }}
+          >
+            <motion.img 
+              src={lunaSpringRight} 
+              alt="Luna新春形象"
+              className="w-full h-auto drop-shadow-2xl"
+              animate={{ 
+                y: [0, -10, 0],
+                rotate: [2, -2, 2]
+              }}
+              transition={{ 
+                duration: 2.5, 
+                repeat: Infinity, 
+                ease: "easeInOut",
+                delay: 0.3
+              }}
+            />
+            {/* 金币/福字动画 */}
+            <motion.div 
+              className="absolute -top-2 -left-2 text-3xl"
+              animate={{ 
+                y: [0, -6, 0],
+                rotate: [0, -15, 0],
+                scale: [1, 1.15, 1]
+              }}
+              transition={{ duration: 1.8, repeat: Infinity, delay: 0.8 }}
+            >
+              🎊
+            </motion.div>
           </motion.div>
 
           <div className="text-center max-w-3xl mx-auto relative z-20">
