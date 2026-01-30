@@ -6,7 +6,8 @@ import { Globe, MessageSquare, Shield, Sparkles, Check, Calendar, Bot, Phone } f
 import { motion } from "framer-motion";
 
 const Index = () => {
-  return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
+  return (
+    <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-festival-red/10 rounded-full blur-3xl" />
@@ -333,4 +334,5 @@ const Index = () => {
     </div>
   );
 };
+
 export default Index;
