@@ -36,7 +36,7 @@ const Index = () => {
             <p className="text-lg lg:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up" style={{
             animationDelay: "0.1s"
           }}>节假日无人值守？多语言沟通障碍？让AI客服帮你7×24小时全自动接待，
-春节期间完全免费，回家过年也能稳稳赚钱。<strong className="text-festival-red">春节期间免费使用</strong>，回家过年也能稳稳赚钱。
+春节期间免费使用，回家过年也能稳稳赚钱。<strong className="text-festival-red">春节期间免费使用</strong>，回家过年也能稳稳赚钱。
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up" style={{
@@ -150,9 +150,7 @@ const Index = () => {
           <div className="text-center mb-10">
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-6 shadow-lg">
               <Calendar className="w-5 h-5" />
-              <span className="font-bold">
-                🧧 活动时间：1月15日 - 2月15日 🧧
-              </span>
+              <span className="font-bold">🧧 活动时间：2月1日 - 2月28日 🧧</span>
             </div>
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
               新春<span className="text-gradient-festival">限时免费</span>大礼包
