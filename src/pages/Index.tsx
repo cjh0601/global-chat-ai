@@ -190,10 +190,9 @@ const Index = () => {
                 <a href="tel:17359196071">
                   <Button size="xl" className="w-full h-16 text-xl font-bold bg-white text-festival-red hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
                     <Phone className="w-6 h-6" />
-                    立即电话咨询
+                    立即电话咨询：17359196071
                   </Button>
                 </a>
-                <p className="text-center text-white/80 mt-3 text-sm">咨询热线：17359196071</p>
               </div>
             </motion.div>
           </motion.div>
