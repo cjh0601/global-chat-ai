@@ -114,7 +114,7 @@ const Index = () => {
                 将节假日流量转化为实实在在的订单与收入
               </p>
               <p className="text-lg text-festival-red font-semibold">让跨境聚聊AI为你创造"春节利润"<br />
-                让跨境聚聊AI为你创造"春节利润"
+                ​
               </p>
             </div>
           </div>
