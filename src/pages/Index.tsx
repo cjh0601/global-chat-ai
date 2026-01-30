@@ -4,7 +4,7 @@ import Footer from "@/components/layout/Footer";
 import FeatureCard from "@/components/shared/FeatureCard";
 import CTASection from "@/components/shared/CTASection";
 import { Button } from "@/components/ui/button";
-import { Gift, Clock, Globe, ShoppingBag, MessageSquare, Shield, Sparkles, ArrowRight, Check, Calendar, Bot } from "lucide-react";
+import { Gift, Clock, Globe, ShoppingBag, MessageSquare, Shield, Sparkles, ArrowRight, Check, Calendar, Bot, Phone } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Index = () => {
@@ -132,11 +132,13 @@ const Index = () => {
                 {/* 价格区域 */}
                 <div className="text-center mb-8">
                   <p className="text-white/80 text-lg mb-2">限时免费价值</p>
-                  <div className="flex items-center justify-center gap-3 mb-2">
+                  <div className="flex items-center justify-center gap-3 mb-4">
                     <span className="text-2xl line-through text-white/50">¥498</span>
                     <span className="text-6xl lg:text-7xl font-black">¥0</span>
                   </div>
-                  <p className="text-white/70 text-sm">活动结束后恢复正常价格 ¥498/月</p>
+                  <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full border border-white/30">
+                    <p className="text-white font-bold text-lg">⏰ 活动结束后恢复正常价格 ¥498/月</p>
+                  </div>
                 </div>
 
                 {/* 功能列表 */}
@@ -160,11 +162,12 @@ const Index = () => {
                 </div>
 
                 {/* CTA按钮 */}
-                <Button size="xl" className="w-full h-16 text-xl font-bold bg-white text-festival-red hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
-                  <Gift className="w-6 h-6" />
-                  立即免费领取
-                  <ArrowRight className="w-6 h-6" />
-                </Button>
+                <a href="tel:17359196071">
+                  <Button size="xl" className="w-full h-16 text-xl font-bold bg-white text-festival-red hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
+                    <Phone className="w-6 h-6" />
+                    立即电话咨询：17359196071
+                  </Button>
+                </a>
               </div>
             </motion.div>
           </motion.div>
@@ -326,9 +329,8 @@ const Index = () => {
       {/* CTA Section */}
       <CTASection
         title="今年春节，让AI替你值班"
-        description="立即领取新春免费大礼包，安心回家过年"
-        primaryCta="立即免费领取"
-        secondaryCta="咨询活动详情"
+        description="立即电话咨询，抢占春节商机"
+        primaryCta="立即电话咨询：17359196071"
         variant="festival"
         showContact
       />
@@ -345,15 +347,17 @@ const Index = () => {
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            <Button 
-              variant="festival" 
-              size="lg" 
-              className="shadow-2xl group px-8 py-6 text-lg"
-            >
-              <Gift className="w-5 h-5" />
-              立即免费领取
-              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-            </Button>
+            <a href="tel:17359196071">
+              <Button 
+                variant="festival" 
+                size="lg" 
+                className="shadow-2xl group px-8 py-6 text-lg"
+              >
+                <Phone className="w-5 h-5" />
+                立即电话咨询
+                <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+              </Button>
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

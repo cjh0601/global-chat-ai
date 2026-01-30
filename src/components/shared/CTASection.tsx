@@ -37,14 +37,17 @@ const CTASection = ({
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <Button
-            variant="secondary"
-            size="xl"
-            className="group"
-          >
-            {primaryCta}
-            <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-          </Button>
+          <a href="tel:17359196071">
+            <Button
+              variant="secondary"
+              size="xl"
+              className="group"
+            >
+              <Phone className="w-5 h-5" />
+              {primaryCta}
+              <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+            </Button>
+          </a>
           {secondaryCta && (
             <Button
               variant="outline"
