@@ -1,6 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/logo.png";
@@ -40,12 +40,15 @@ const Header = ({ variant = "default" }: HeaderProps) => {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <Button 
-              variant={variant === "festival" ? "festival" : variant === "tech" ? "tech" : "hero"} 
-              size="lg"
-            >
-              {getCtaText()}
-            </Button>
+            <a href="tel:17359196071">
+              <Button 
+                variant={variant === "festival" ? "festival" : variant === "tech" ? "tech" : "hero"} 
+                size="lg"
+              >
+                <Phone className="w-4 h-4" />
+                电话咨询
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -65,13 +68,16 @@ const Header = ({ variant = "default" }: HeaderProps) => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <div className="px-4">
-              <Button 
-                variant={variant === "festival" ? "festival" : variant === "tech" ? "tech" : "hero"} 
-                size="lg" 
-                className="w-full"
-              >
-                {getCtaText()}
-              </Button>
+              <a href="tel:17359196071" className="block">
+                <Button 
+                  variant={variant === "festival" ? "festival" : variant === "tech" ? "tech" : "hero"} 
+                  size="lg" 
+                  className="w-full"
+                >
+                  <Phone className="w-4 h-4" />
+                  电话咨询：17359196071
+                </Button>
+              </a>
             </div>
           </div>
         )}
