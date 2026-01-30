@@ -36,19 +36,6 @@ const Index = () => {
           type: "spring",
           stiffness: 80
         }}>
-            
-            {/* 红包飘落动画 */}
-            <motion.div className="absolute -top-4 -right-2 text-3xl" animate={{
-            y: [0, 8, 0],
-            rotate: [0, 10, 0],
-            scale: [1, 1.1, 1]
-          }} transition={{
-            duration: 2,
-            repeat: Infinity,
-            delay: 0.5
-          }}>
-              🧧
-            </motion.div>
           </motion.div>
 
           {/* Luna春节形象 - 右侧 */}
@@ -75,18 +62,6 @@ const Index = () => {
             ease: "easeInOut",
             delay: 0.3
           }} />
-            {/* 金币/福字动画 */}
-            <motion.div className="absolute -top-2 -left-2 text-3xl" animate={{
-            y: [0, -6, 0],
-            rotate: [0, -15, 0],
-            scale: [1, 1.15, 1]
-          }} transition={{
-            duration: 1.8,
-            repeat: Infinity,
-            delay: 0.8
-          }}>
-              🎊
-            </motion.div>
           </motion.div>
 
           <div className="text-center max-w-3xl mx-auto relative z-20">
