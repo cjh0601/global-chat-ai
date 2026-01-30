@@ -34,7 +34,7 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
-          <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto">
             {/* Festival badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-8 animate-fade-in shadow-lg">
               <Sparkles className="w-5 h-5 text-festival-gold" />
@@ -42,21 +42,24 @@ const Index = () => {
             </div>
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-slide-up leading-tight">
-              春节安心回家
+              别人过年你赚钱
               <br />
-              <span className="text-gradient-festival mt-2 inline-block">跨境聚聊替你全球接单</span>
+              <span className="text-gradient-festival mt-2 inline-block">跨境聚聊AI替你全球接单</span>
             </h1>
 
             <div className="space-y-4 mb-10 animate-slide-up" style={{ animationDelay: "0.1s" }}>
               <p className="text-xl lg:text-2xl text-foreground/90 font-medium">
-                <span className="text-festival-red">节假日无人值守？</span>
-                <span className="mx-2 text-muted-foreground">·</span>
-                <span className="text-festival-red">多语言沟通障碍？</span>
+                部署跨境聚聊AI客服
               </p>
               <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-                让AI客服帮你 <span className="text-festival-gold font-semibold">7×24小时全自动接待</span>
+                自动承接全球询盘、精准推荐、智能催付
                 <br />
-                春节期间 <span className="text-festival-red font-semibold">限时免费</span>，回家过年也能稳稳赚钱
+                将节假日流量转化为 <span className="text-festival-red font-semibold">实实在在的订单与收入</span>
+              </p>
+              <p className="text-lg text-foreground font-medium">
+                <span className="text-festival-gold">立即免费领取，抢占春节商机</span>
+                <br />
+                让跨境聚聊AI为你创造 <span className="text-festival-red font-bold">"春节利润"</span>
               </p>
             </div>
           </div>
