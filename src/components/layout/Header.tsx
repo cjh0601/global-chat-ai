@@ -12,13 +12,17 @@ const Header = ({ variant = "default" }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
 
-  const navItems = [
-    { label: "新春促销", path: "/spring-festival", highlight: variant === "festival" },
-    { label: "案例展示", path: "/case-studies", highlight: variant === "tech" },
-    { label: "配置支持", path: "/support", highlight: variant === "default" },
-  ];
-
-  const isActive = (path: string) => location.pathname === path;
+  // 每个页面独立，导航项根据当前variant显示不同的CTA
+  const getCtaText = () => {
+    switch (variant) {
+      case "festival":
+        return "立即领取";
+      case "tech":
+        return "免费体验";
+      default:
+        return "免费试用";
+    }
+  };
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-lg border-b border-border">
@@ -28,42 +32,26 @@ const Header = ({ variant = "default" }: HeaderProps) => {
           <Link to="/" className="flex items-center gap-2 group">
             <div className={cn(
               "w-10 h-10 rounded-xl flex items-center justify-center transition-transform group-hover:scale-110",
-              variant === "festival" ? "gradient-festival" : "gradient-primary"
+              variant === "festival" ? "gradient-festival" : 
+              variant === "tech" ? "gradient-tech" : "gradient-accent"
             )}>
               <MessageCircle className="w-5 h-5 text-primary-foreground" />
             </div>
             <span className="text-xl font-bold text-foreground">
               跨境<span className={cn(
-                variant === "festival" ? "text-gradient-festival" : "text-gradient-primary"
+                variant === "festival" ? "text-gradient-festival" : 
+                variant === "tech" ? "text-gradient-primary" : "text-gradient-accent"
               )}>聚聊</span>
             </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-1">
-            {navItems.map((item) => (
-              <Link
-                key={item.path}
-                to={item.path}
-                className={cn(
-                  "px-4 py-2 rounded-lg text-sm font-medium transition-colors",
-                  isActive(item.path)
-                    ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                )}
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-
-          {/* CTA Button */}
+          {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <Button 
-              variant={variant === "festival" ? "festival" : "hero"} 
+              variant={variant === "festival" ? "festival" : variant === "tech" ? "tech" : "hero"} 
               size="lg"
             >
-              免费试用
+              {getCtaText()}
             </Button>
           </div>
 
@@ -83,32 +71,15 @@ const Header = ({ variant = "default" }: HeaderProps) => {
         {/* Mobile Menu */}
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col gap-2">
-              {navItems.map((item) => (
-                <Link
-                  key={item.path}
-                  to={item.path}
-                  onClick={() => setIsMenuOpen(false)}
-                  className={cn(
-                    "px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                    isActive(item.path)
-                      ? "bg-primary/10 text-primary"
-                      : "text-muted-foreground hover:text-foreground hover:bg-muted"
-                  )}
-                >
-                  {item.label}
-                </Link>
-              ))}
-              <div className="pt-4 px-4">
-                <Button 
-                  variant={variant === "festival" ? "festival" : "hero"} 
-                  size="lg" 
-                  className="w-full"
-                >
-                  免费试用
-                </Button>
-              </div>
-            </nav>
+            <div className="px-4">
+              <Button 
+                variant={variant === "festival" ? "festival" : variant === "tech" ? "tech" : "hero"} 
+                size="lg" 
+                className="w-full"
+              >
+                {getCtaText()}
+              </Button>
+            </div>
           </div>
         )}
       </div>
