@@ -1,101 +1,9 @@
-import { Phone, Mail, MapPin } from "lucide-react";
-import logo from "@/assets/logo.png";
-
+import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
-          {/* Brand */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <img src={logo} alt="跨境聚聊AI版" className="h-10" />
-            </div>
-            <p className="text-primary-foreground/70 text-sm leading-relaxed">
-              为跨境电商卖家提供智能客服解决方案，
-              支持DHgate、Shopee、Lazada、Ozon、Daraz五大平台，129+语言翻译，7×24小时自动接待。
-            </p>
-          </div>
-
-          {/* Products */}
-          <div>
-            <h4 className="font-semibold mb-4">产品服务</h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  AI智能客服
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  多店铺聚合
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  多语言翻译
-                </a>
-              </li>
-              <li>
-                <a href="#pricing" className="hover:text-primary-foreground transition-colors">
-                  价格方案
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Resources */}
-          <div>
-            <h4 className="font-semibold mb-4">资源中心</h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  帮助文档
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  API接入指南
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  常见问题
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:text-primary-foreground transition-colors">
-                  更新日志
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          {/* Contact */}
-          <div>
-            <h4 className="font-semibold mb-4">联系我们</h4>
-            <ul className="space-y-3 text-sm text-primary-foreground/70">
-              <li className="flex items-center gap-2">
-                <Phone className="w-4 h-4" />
-                <span>17359196071</span>
-              </li>
-              <li className="flex items-center gap-2">
-                <Mail className="w-4 h-4" />
-                <span>support@kuajingjuliao.com</span>
-              </li>
-              <li className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 mt-0.5" />
-                <span>深圳市南山区科技园</span>
-              </li>
-            </ul>
-            <div className="mt-4 p-3 bg-primary-foreground/10 rounded-lg">
-              <p className="text-xs text-primary-foreground/70 mb-1">企业微信</p>
-              <p className="text-sm font-medium">扫码添加专属客服</p>
-            </div>
-          </div>
-        </div>
+        
 
         {/* Bottom */}
         <div className="mt-12 pt-8 border-t border-primary-foreground/10">
@@ -115,8 +23,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
