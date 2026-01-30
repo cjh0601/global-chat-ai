@@ -33,7 +33,7 @@ const Index = () => {
               <span className="text-gradient-festival">跨境聚聊替你全球接单</span>
             </h1>
 
-            <p className="text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-slide-up text-destructive-foreground" style={{
+            <p className="text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-slide-up text-primary bg-destructive-foreground" style={{
             animationDelay: "0.1s"
           }}>节假日无人值守？多语言沟通障碍？让AI客服帮你7×24小时全自动接待，
 春节期间免费使用，回家过年也能稳稳赚钱。​​
