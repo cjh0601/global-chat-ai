@@ -33,7 +33,7 @@ const Index = () => {
             <motion.img 
               src={lunaSpringLeft} 
               alt="Luna春节形象" 
-              className="w-full h-auto drop-shadow-2xl"
+              className="w-full h-auto drop-shadow-2xl mix-blend-multiply"
               animate={{ 
                 y: [0, -15, 0],
                 rotate: [-2, 2, -2]
@@ -56,7 +56,7 @@ const Index = () => {
             <motion.img 
               src={lunaSpringRight} 
               alt="Luna春节形象" 
-              className="w-full h-auto drop-shadow-2xl"
+              className="w-full h-auto drop-shadow-2xl mix-blend-multiply"
               animate={{ 
                 y: [0, -12, 0],
                 rotate: [2, -2, 2]
