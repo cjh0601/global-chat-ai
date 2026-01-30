@@ -30,7 +30,7 @@ const CTASection = ({
           <a href="tel:17359196071">
             <Button variant="secondary" size="xl" className="group">
               <Phone className="w-5 h-5" />
-              {primaryCta}
+              立即电话咨询：17359196071
             </Button>
           </a>
           {secondaryCta && <Button variant="outline" size="xl" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
