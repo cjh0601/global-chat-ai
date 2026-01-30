@@ -260,7 +260,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">王老板</p>
-                  <p className="text-sm text-muted-foreground">亚马逊卖家 · 深圳</p>
+                  <p className="text-sm text-muted-foreground">Shopee卖家 · 深圳</p>
                 </div>
               </div>
             </div>
