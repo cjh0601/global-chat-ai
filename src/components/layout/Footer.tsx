@@ -15,7 +15,7 @@ const Footer = () => {
             </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               为跨境电商卖家提供智能客服解决方案，
-              聚合多店铺、支持多语言、7×24小时自动接待。
+              支持DHgate、Shopee、Lazada、Ozon、Daraz五大平台，129+语言翻译，7×24小时自动接待。
             </p>
           </div>
 

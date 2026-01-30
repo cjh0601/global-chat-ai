@@ -147,7 +147,7 @@ const Index = () => {
                     { icon: "💬", label: "2000条", desc: "AI智能回复" },
                     { icon: "📦", label: "3000个", desc: "SPU商品支持" },
                     { icon: "🏪", label: "不限", desc: "店铺数量" },
-                    { icon: "🌍", label: "30+", desc: "语言翻译" },
+                    { icon: "🌍", label: "129+", desc: "语言翻译" },
                     { icon: "🔗", label: "5大平台", desc: "DHgate/Shopee/Lazada/Ozon/Daraz" },
                     { icon: "🤖", label: "7×24h", desc: "AI值守" },
                   ].map((item, index) => (
@@ -190,32 +190,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pain Points Section */}
+      {/* Features Section - 功能介绍 */}
       <section className="py-16 lg:py-24 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
-              春节回家，店铺怎么办？
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              跨境卖家的春节烦恼，我们都懂
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-            <FeatureCard icon={Clock} title="跨时区无人响应" description="客户在凌晨3点咨询，你在睡觉。等你醒来，订单已经跑到竞争对手那里了。" variant="festival" />
-            <FeatureCard icon={Globe} title="多语言沟通障碍" description="德国客户用德语问问题，你只能回复蹩脚的英语，客户体验大打折扣。" variant="festival" />
-            <FeatureCard icon={ShoppingBag} title="多渠道消息分散" description="亚马逊、eBay、速卖通、Shopify…每个平台都要切换，消息根本看不过来。" variant="festival" />
-          </div>
-        </div>
-      </section>
-
-      {/* Solution Section */}
-      <section className="py-16 lg:py-24 relative">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
-              跨境聚聊，<span className="text-gradient-festival">春节也在线</span>
+              跨境聚聊AI，<span className="text-gradient-festival">你的全球智能客服</span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               AI智能客服7×24小时值守，让你安心享受假期
@@ -228,28 +208,28 @@ const Index = () => {
                 <Bot className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">AI智能值守</h3>
-              <p className="text-sm text-muted-foreground">7×24小时自动回复，秒级响应客户咨询</p>
+              <p className="text-sm text-muted-foreground">7×24小时自动回复，秒级响应客户咨询，节假日也不错过任何商机</p>
             </div>
             <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Globe className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h3 className="font-bold text-foreground mb-2">多语言支持</h3>
-              <p className="text-sm text-muted-foreground">支持30+语言自动翻译，无障碍全球沟通</p>
+              <h3 className="font-bold text-foreground mb-2">129+语言支持</h3>
+              <p className="text-sm text-muted-foreground">支持129+语言自动翻译，无障碍全球沟通，轻松服务各国客户</p>
             </div>
             <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MessageSquare className="w-8 h-8 text-primary-foreground" />
               </div>
-              <h3 className="font-bold text-foreground mb-2">多店铺聚合</h3>
-              <p className="text-sm text-muted-foreground">一个后台管理所有平台，消息不再遗漏</p>
+              <h3 className="font-bold text-foreground mb-2">5大平台聚合</h3>
+              <p className="text-sm text-muted-foreground">支持DHgate、Shopee、Lazada、Ozon、Daraz，一个后台管理所有店铺</p>
             </div>
             <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">安全可靠</h3>
-              <p className="text-sm text-muted-foreground">企业级数据加密，店铺信息安全无忧</p>
+              <p className="text-sm text-muted-foreground">企业级数据加密，店铺信息安全无忧，让您放心使用</p>
             </div>
           </div>
         </div>
