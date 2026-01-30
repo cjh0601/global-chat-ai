@@ -18,30 +18,34 @@ const Index = () => {
 
       <Header variant="festival" />
 
-      {/* Hero Section - 精简版 */}
-      <section className="relative pt-24 lg:pt-28 pb-8 lg:pb-12">
+      {/* Hero Section */}
+      <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
-          <div className="text-center max-w-4xl mx-auto">
+          <div className="text-center max-w-3xl mx-auto">
             {/* Festival badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-6 animate-fade-in shadow-lg">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-8 animate-fade-in shadow-lg">
               <Sparkles className="w-5 h-5 text-festival-gold" />
               <span className="font-bold">🧧 2026新春限时活动 · 免费领取 🧧</span>
             </div>
 
-            <h1 className="text-3xl md:text-5xl font-bold text-foreground mb-6 animate-slide-up lg:text-5xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-slide-up leading-tight">
               春节安心回家
               <br />
-              <span className="text-gradient-festival">跨境聚聊替你全球接单</span>
+              <span className="text-gradient-festival mt-2 inline-block">跨境聚聊替你全球接单</span>
             </h1>
 
-            <p className="text-lg lg:text-xl mb-8 max-w-2xl mx-auto animate-slide-up text-foreground/80" style={{ animationDelay: "0.1s" }}>
-              <span className="text-festival-red font-semibold">节假日无人值守？</span>
-              <span className="text-festival-red font-semibold">多语言沟通障碍？</span>
-              <br className="hidden sm:block" />
-              让AI客服帮你<span className="text-festival-gold font-bold">7×24小时全自动接待</span>，
-              <br className="hidden sm:block" />
-              春节期间<span className="text-festival-red font-bold">免费使用</span>，回家过年也能稳稳赚钱。
-            </p>
+            <div className="space-y-4 mb-10 animate-slide-up" style={{ animationDelay: "0.1s" }}>
+              <p className="text-xl lg:text-2xl text-foreground/90 font-medium">
+                <span className="text-festival-red">节假日无人值守？</span>
+                <span className="mx-2 text-muted-foreground">·</span>
+                <span className="text-festival-red">多语言沟通障碍？</span>
+              </p>
+              <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
+                让AI客服帮你 <span className="text-festival-gold font-semibold">7×24小时全自动接待</span>
+                <br />
+                春节期间 <span className="text-festival-red font-semibold">限时免费</span>，回家过年也能稳稳赚钱
+              </p>
+            </div>
           </div>
         </div>
       </section>
