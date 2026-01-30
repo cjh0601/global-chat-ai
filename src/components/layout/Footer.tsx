@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { MessageCircle, Phone, Mail, MapPin } from "lucide-react";
 
 const Footer = () => {
@@ -10,12 +9,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <Link to="/" className="flex items-center gap-2 mb-4">
+            <div className="flex items-center gap-2 mb-4">
               <div className="w-10 h-10 rounded-xl gradient-accent flex items-center justify-center">
                 <MessageCircle className="w-5 h-5" />
               </div>
               <span className="text-xl font-bold">跨境聚聊</span>
-            </Link>
+            </div>
             <p className="text-primary-foreground/70 text-sm leading-relaxed">
               为跨境电商卖家提供智能客服解决方案，
               聚合多店铺、支持多语言、7×24小时自动接待。
@@ -27,19 +26,19 @@ const Footer = () => {
             <h4 className="font-semibold mb-4">产品服务</h4>
             <ul className="space-y-3 text-sm text-primary-foreground/70">
               <li>
-                <Link to="/spring-festival" className="hover:text-primary-foreground transition-colors">
-                  新春限时活动
-                </Link>
+                <a href="#" className="hover:text-primary-foreground transition-colors">
+                  AI智能客服
+                </a>
               </li>
               <li>
-                <Link to="/case-studies" className="hover:text-primary-foreground transition-colors">
-                  AI客服案例
-                </Link>
+                <a href="#" className="hover:text-primary-foreground transition-colors">
+                  多店铺聚合
+                </a>
               </li>
               <li>
-                <Link to="/support" className="hover:text-primary-foreground transition-colors">
-                  配置与支持
-                </Link>
+                <a href="#" className="hover:text-primary-foreground transition-colors">
+                  多语言翻译
+                </a>
               </li>
               <li>
                 <a href="#pricing" className="hover:text-primary-foreground transition-colors">
