@@ -6,10 +6,8 @@ import { Globe, MessageSquare, Shield, Sparkles, Check, Calendar, Bot, Phone } f
 import { motion } from "framer-motion";
 import lunaSpringLeft from "@/assets/luna-spring-left.png";
 import lunaSpringRight from "@/assets/luna-spring-right.png";
-
 const Index = () => {
-  return (
-    <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
+  return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
       <div className="fixed inset-0 pointer-events-none">
         <div className="absolute top-20 left-10 w-64 h-64 bg-festival-red/10 rounded-full blur-3xl" />
@@ -24,50 +22,43 @@ const Index = () => {
       <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
           {/* Luna春节形象 - 左侧 */}
-          <motion.div 
-            className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
-          >
-            <motion.img 
-              src={lunaSpringLeft} 
-              alt="Luna春节形象" 
-              className="w-full h-auto drop-shadow-2xl mix-blend-multiply"
-              animate={{ 
-                y: [0, -15, 0],
-                rotate: [-2, 2, -2]
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            />
+          <motion.div className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10" initial={{
+          opacity: 0,
+          x: -100
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.3,
+          type: "spring",
+          stiffness: 80
+        }}>
+            
           </motion.div>
 
           {/* Luna春节形象 - 右侧 */}
-          <motion.div 
-            className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 80 }}
-          >
-            <motion.img 
-              src={lunaSpringRight} 
-              alt="Luna春节形象" 
-              className="w-full h-auto drop-shadow-2xl mix-blend-multiply"
-              animate={{ 
-                y: [0, -12, 0],
-                rotate: [2, -2, 2]
-              }}
-              transition={{ 
-                duration: 3.5, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-            />
+          <motion.div className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10" initial={{
+          opacity: 0,
+          x: 100
+        }} animate={{
+          opacity: 1,
+          x: 0
+        }} transition={{
+          duration: 0.8,
+          delay: 0.5,
+          type: "spring",
+          stiffness: 80
+        }}>
+            <motion.img src={lunaSpringRight} alt="Luna春节形象" className="w-full h-auto drop-shadow-2xl mix-blend-multiply" animate={{
+            y: [0, -12, 0],
+            rotate: [2, -2, 2]
+          }} transition={{
+            duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
+            delay: 0.5
+          }} />
           </motion.div>
 
           <div className="text-center max-w-3xl mx-auto relative z-20">
@@ -379,8 +370,6 @@ const Index = () => {
 
       <Footer />
 
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
