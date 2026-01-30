@@ -1,19 +1,11 @@
-import { useState, useEffect } from "react";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import CTASection from "@/components/shared/CTASection";
 import { Button } from "@/components/ui/button";
 import { Globe, MessageSquare, Shield, Sparkles, Check, Calendar, Bot, Phone } from "lucide-react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
+
 const Index = () => {
-  const [showFloatingCTA, setShowFloatingCTA] = useState(false);
-  useEffect(() => {
-    const handleScroll = () => {
-      setShowFloatingCTA(window.scrollY > 400);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
   return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
       <div className="fixed inset-0 pointer-events-none">
@@ -338,30 +330,7 @@ const Index = () => {
 
       <Footer />
 
-      {/* 悬浮电话咨询按钮 */}
-      <AnimatePresence>
-        {showFloatingCTA && <motion.div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-50" initial={{
-        y: 100,
-        opacity: 0
-      }} animate={{
-        y: 0,
-        opacity: 1
-      }} exit={{
-        y: 100,
-        opacity: 0
-      }} transition={{
-        type: "spring",
-        stiffness: 300,
-        damping: 30
-      }}>
-            <a href="tel:17359196071">
-              <Button variant="festival" size="lg" className="shadow-2xl group px-8 py-6 text-lg">
-                <Phone className="w-5 h-5" />
-                立即电话咨询
-              </Button>
-            </a>
-          </motion.div>}
-      </AnimatePresence>
-    </div>;
+    </div>
+  );
 };
 export default Index;
