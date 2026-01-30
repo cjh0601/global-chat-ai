@@ -5,17 +5,21 @@ import CTASection from "@/components/shared/CTASection";
 import { Button } from "@/components/ui/button";
 import { Gift, Clock, Globe, ShoppingBag, MessageSquare, Shield, Sparkles, ArrowRight, Check, Calendar, Bot } from "lucide-react";
 const Index = () => {
-  return <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
+      {/* 全局装饰元素 */}
+      <div className="fixed inset-0 pointer-events-none">
+        <div className="absolute top-20 left-10 w-64 h-64 bg-festival-red/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 right-10 w-80 h-80 bg-festival-gold/15 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 left-1/4 w-56 h-56 bg-festival-red/8 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-1/3 w-48 h-48 bg-festival-gold/12 rounded-full blur-3xl" />
+      </div>
+
       <Header variant="festival" />
 
       {/* Hero Section */}
-      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
-        {/* 喜庆装饰元素 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-festival-red/5 to-festival-gold/5" />
-        <div className="absolute top-20 left-10 w-32 h-32 bg-festival-red/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-festival-gold/30 rounded-full blur-3xl" />
-        <div className="absolute top-40 right-1/4 w-20 h-20 bg-festival-gold/40 rounded-full blur-2xl animate-float" />
-        <div className="absolute bottom-20 left-1/3 w-16 h-16 bg-festival-red/30 rounded-full blur-2xl animate-float" style={{
+      <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24">
+        <div className="absolute top-40 right-1/4 w-20 h-20 bg-festival-gold/30 rounded-full blur-2xl animate-float" />
+        <div className="absolute bottom-20 left-1/3 w-16 h-16 bg-festival-red/20 rounded-full blur-2xl animate-float" style={{
         animationDelay: "2s"
       }} />
 
@@ -74,7 +78,7 @@ const Index = () => {
       </section>
 
       {/* Pain Points Section */}
-      <section className="py-16 lg:py-24 bg-muted/50">
+      <section className="py-16 lg:py-24 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
@@ -94,7 +98,7 @@ const Index = () => {
       </section>
 
       {/* Solution Section */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
@@ -106,28 +110,28 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-card border border-border text-center group hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Bot className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">AI智能值守</h3>
               <p className="text-sm text-muted-foreground">7×24小时自动回复，秒级响应客户咨询</p>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-border text-center group hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Globe className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">多语言支持</h3>
               <p className="text-sm text-muted-foreground">支持30+语言自动翻译，无障碍全球沟通</p>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-border text-center group hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MessageSquare className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">多店铺聚合</h3>
               <p className="text-sm text-muted-foreground">一个后台管理所有平台，消息不再遗漏</p>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-border text-center group hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all">
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="w-8 h-8 text-primary-foreground" />
               </div>
@@ -139,12 +143,8 @@ const Index = () => {
       </section>
 
       {/* Pricing Section - 突出展示免费包 */}
-      <section className="py-16 lg:py-24 relative overflow-hidden">
-        {/* 喜庆背景 */}
-        <div className="absolute inset-0 bg-gradient-to-b from-festival-red/10 via-festival-gold/5 to-festival-red/10" />
-        <div className="absolute top-10 left-10 w-40 h-40 bg-festival-gold/20 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-56 h-56 bg-festival-red/15 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-festival-gold/30 rounded-full blur-2xl animate-float" />
+      <section className="py-16 lg:py-24 relative">
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-festival-gold/20 rounded-full blur-2xl animate-float" />
         
         <div className="container mx-auto px-4 relative">
           <div className="text-center mb-10">
@@ -244,7 +244,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 lg:py-24">
+      <section className="py-16 lg:py-24 relative">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
@@ -253,7 +253,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="p-6 rounded-2xl bg-card border border-festival-red/20 hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/20 hover:shadow-lg transition-all">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map(i => <Sparkles key={i} className="w-4 h-4 text-festival-gold" />)}
               </div>
@@ -270,7 +270,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-festival-gold/20 hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/20 hover:shadow-lg transition-all">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map(i => <Sparkles key={i} className="w-4 h-4 text-festival-gold" />)}
               </div>
@@ -287,7 +287,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-festival-red/20 hover:shadow-lg transition-all">
+            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/20 hover:shadow-lg transition-all">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map(i => <Sparkles key={i} className="w-4 h-4 text-festival-gold" />)}
               </div>
