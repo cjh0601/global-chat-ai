@@ -60,7 +60,7 @@ const CTASection = ({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>400-888-8888</span>
+              <span>17359196071</span>
             </div>
             <div className="flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />
