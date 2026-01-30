@@ -306,7 +306,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">王老板</p>
-                  <p className="text-sm text-muted-foreground">亚马逊卖家 · 深圳</p>
+                  <p className="text-sm text-muted-foreground">Shopee卖家 · 深圳</p>
                 </div>
               </div>
             </div>
@@ -323,7 +323,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">李总</p>
-                  <p className="text-sm text-muted-foreground">Shopify卖家 · 杭州</p>
+                  <p className="text-sm text-muted-foreground">DHgate卖家 · 杭州</p>
                 </div>
               </div>
             </div>
@@ -340,7 +340,7 @@ const Index = () => {
                 </div>
                 <div>
                   <p className="font-medium text-foreground">张经理</p>
-                  <p className="text-sm text-muted-foreground">eBay卖家 · 广州</p>
+                  <p className="text-sm text-muted-foreground">Lazada卖家 · 广州</p>
                 </div>
               </div>
             </div>
