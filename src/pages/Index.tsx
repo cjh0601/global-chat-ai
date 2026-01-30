@@ -4,6 +4,7 @@ import FeatureCard from "@/components/shared/FeatureCard";
 import CTASection from "@/components/shared/CTASection";
 import { Button } from "@/components/ui/button";
 import { Gift, Clock, Globe, ShoppingBag, MessageSquare, Shield, Sparkles, ArrowRight, Check, Calendar, Bot } from "lucide-react";
+import { motion } from "framer-motion";
 
 const Index = () => {
   return (
@@ -55,7 +56,13 @@ const Index = () => {
         <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-festival-gold/20 rounded-full blur-2xl animate-float" />
         
         <div className="container mx-auto px-4 relative">
-          <div className="text-center mb-8">
+          <motion.div 
+            className="text-center mb-8"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+          >
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-4 shadow-lg">
               <Calendar className="w-5 h-5" />
               <span className="font-bold">🧧 活动时间：2月1日 - 2月28日 🧧</span>
@@ -63,19 +70,48 @@ const Index = () => {
             <h2 className="text-3xl lg:text-5xl font-bold text-foreground">
               新春<span className="text-gradient-festival">限时免费</span>大礼包
             </h2>
-          </div>
+          </motion.div>
 
           {/* 突出显示的免费包卡片 */}
-          <div className="max-w-2xl mx-auto">
-            <div className="relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-festival-red to-festival-gold text-white shadow-2xl overflow-hidden">
+          <motion.div 
+            className="max-w-2xl mx-auto"
+            initial={{ opacity: 0, scale: 0.9, y: 40 }}
+            whileInView={{ opacity: 1, scale: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ 
+              duration: 0.6, 
+              delay: 0.2,
+              type: "spring",
+              stiffness: 100
+            }}
+          >
+            <motion.div 
+              className="relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-festival-red to-festival-gold text-white shadow-2xl overflow-hidden"
+              whileHover={{ scale: 1.02, boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}
+              transition={{ type: "spring", stiffness: 300 }}
+            >
               {/* 装饰图案 */}
-              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
-              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+              <motion.div 
+                className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2"
+                animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.2, 0.1] }}
+                transition={{ duration: 3, repeat: Infinity }}
+              />
+              <motion.div 
+                className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2"
+                animate={{ scale: [1, 1.15, 1], opacity: [0.1, 0.15, 0.1] }}
+                transition={{ duration: 4, repeat: Infinity, delay: 1 }}
+              />
               
               {/* 标签 */}
-              <div className="absolute -top-1 -right-1 px-6 py-2 bg-festival-gold text-festival-gold-foreground font-bold text-sm rounded-bl-2xl rounded-tr-3xl shadow-lg">
+              <motion.div 
+                className="absolute -top-1 -right-1 px-6 py-2 bg-festival-gold text-festival-gold-foreground font-bold text-sm rounded-bl-2xl rounded-tr-3xl shadow-lg"
+                initial={{ x: 20, opacity: 0 }}
+                whileInView={{ x: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: 0.5, duration: 0.4 }}
+              >
                 🎁 新春特惠
-              </div>
+              </motion.div>
 
               <div className="relative">
                 {/* 价格区域 */}
@@ -115,8 +151,8 @@ const Index = () => {
                   <ArrowRight className="w-6 h-6" />
                 </Button>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
           {/* Trust badges */}
           <div className="mt-8 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
