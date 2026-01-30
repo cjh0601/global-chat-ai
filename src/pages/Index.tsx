@@ -326,7 +326,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <CTASection title="今年春节，让AI替你值班" description="立即电话咨询，抢占春节商机" primaryCta="立即电话咨询" secondaryCta="企业微信咨询" variant="festival" showContact />
+      <CTASection title="今年春节，让AI替你值班" description="立即电话咨询，抢占春节商机" primaryCta="立即电话咨询" variant="festival" />
 
       <Footer />
 
