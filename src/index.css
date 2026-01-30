@@ -32,13 +32,17 @@
     --accent: 12 85% 55%;
     --accent-foreground: 0 0% 100%;
 
-    /* Festival Gold - Spring Festival Special */
-    --festival-gold: 43 96% 56%;
+    /* Festival Gold - Spring Festival Special - 更鲜艳的金色 */
+    --festival-gold: 45 100% 51%;
     --festival-gold-foreground: 0 0% 10%;
 
-    /* Festival Red - Chinese New Year */
-    --festival-red: 0 84% 55%;
+    /* Festival Red - Chinese New Year - 中国红 */
+    --festival-red: 355 85% 52%;
     --festival-red-foreground: 0 0% 100%;
+
+    /* Festival Deep Red - 深红色 */
+    --festival-deep-red: 350 80% 40%;
+    --festival-deep-red-foreground: 0 0% 100%;
 
     /* Success Green */
     --success: 142 71% 45%;
@@ -60,7 +64,9 @@
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(222 84% 18%) 0%, hsl(210 90% 35%) 100%);
     --gradient-accent: linear-gradient(135deg, hsl(12 85% 55%) 0%, hsl(25 95% 55%) 100%);
-    --gradient-festival: linear-gradient(135deg, hsl(0 84% 55%) 0%, hsl(43 96% 56%) 100%);
+    --gradient-festival: linear-gradient(135deg, hsl(355 85% 52%) 0%, hsl(45 100% 51%) 100%);
+    --gradient-festival-bg: linear-gradient(180deg, hsl(355 85% 52% / 0.08) 0%, hsl(45 100% 51% / 0.12) 100%);
+    --gradient-festival-hero: linear-gradient(180deg, hsl(355 90% 97%) 0%, hsl(45 100% 97%) 100%);
     --gradient-hero: linear-gradient(180deg, hsl(210 40% 98%) 0%, hsl(214 32% 96%) 100%);
     --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(210 40% 99%) 100%);
     --gradient-tech: linear-gradient(135deg, hsl(222 84% 18%) 0%, hsl(190 90% 30%) 100%);

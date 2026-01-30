@@ -1,7 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FeatureCard from "@/components/shared/FeatureCard";
-import PricingCard from "@/components/shared/PricingCard";
 import CTASection from "@/components/shared/CTASection";
 import { Button } from "@/components/ui/button";
 import {
@@ -25,18 +24,20 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="relative pt-24 lg:pt-32 pb-16 lg:pb-24 overflow-hidden">
-        {/* Decorative elements */}
-        <div className="absolute top-20 left-10 w-32 h-32 bg-festival-red/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-10 right-10 w-40 h-40 bg-festival-gold/20 rounded-full blur-3xl" />
-        <div className="absolute top-40 right-1/4 w-20 h-20 bg-festival-gold/30 rounded-full blur-2xl animate-float" />
+        {/* 喜庆装饰元素 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-festival-red/5 to-festival-gold/5" />
+        <div className="absolute top-20 left-10 w-32 h-32 bg-festival-red/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-40 h-40 bg-festival-gold/30 rounded-full blur-3xl" />
+        <div className="absolute top-40 right-1/4 w-20 h-20 bg-festival-gold/40 rounded-full blur-2xl animate-float" />
+        <div className="absolute bottom-20 left-1/3 w-16 h-16 bg-festival-red/30 rounded-full blur-2xl animate-float" style={{ animationDelay: "2s" }} />
 
         <div className="container mx-auto px-4 relative">
           <div className="text-center max-w-4xl mx-auto">
             {/* Festival badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-festival-red/10 border border-festival-red/20 mb-6 animate-fade-in">
-              <Sparkles className="w-4 h-4 text-festival-gold" />
-              <span className="text-sm font-medium text-festival-red">
-                2025新春限时活动 · 限时免费
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-6 animate-fade-in shadow-lg">
+              <Sparkles className="w-5 h-5 text-festival-gold" />
+              <span className="font-bold">
+                🧧 2025新春限时活动 · 完全免费 🧧
               </span>
             </div>
 
@@ -48,11 +49,11 @@ const Index = () => {
 
             <p className="text-lg lg:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto animate-slide-up" style={{ animationDelay: "0.1s" }}>
               节假日无人值守？多语言沟通障碍？让AI客服帮你7×24小时全自动接待，
-              <strong className="text-foreground">春节期间完全免费</strong>，回家过年也能稳稳赚钱。
+              <strong className="text-festival-red">春节期间完全免费</strong>，回家过年也能稳稳赚钱。
             </p>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12 animate-slide-up" style={{ animationDelay: "0.2s" }}>
-              <Button variant="festival" size="xl" className="group">
+              <Button variant="festival" size="xl" className="group text-lg">
                 <Gift className="w-5 h-5" />
                 立即领取免费额度
                 <ArrowRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
@@ -64,16 +65,16 @@ const Index = () => {
 
             {/* Stats */}
             <div className="grid grid-cols-3 gap-6 max-w-lg mx-auto animate-fade-in" style={{ animationDelay: "0.3s" }}>
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-gradient-festival">2000</div>
+              <div className="text-center p-4 rounded-2xl bg-festival-red/10 border border-festival-red/20">
+                <div className="text-2xl lg:text-3xl font-bold text-festival-red">2000</div>
                 <div className="text-sm text-muted-foreground">免费回复条数</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-gradient-festival">3000</div>
+              <div className="text-center p-4 rounded-2xl bg-festival-gold/10 border border-festival-gold/20">
+                <div className="text-2xl lg:text-3xl font-bold text-festival-gold">3000</div>
                 <div className="text-sm text-muted-foreground">SPU商品支持</div>
               </div>
-              <div className="text-center">
-                <div className="text-2xl lg:text-3xl font-bold text-gradient-festival">不限</div>
+              <div className="text-center p-4 rounded-2xl bg-festival-red/10 border border-festival-red/20">
+                <div className="text-2xl lg:text-3xl font-bold text-festival-red">不限</div>
                 <div className="text-sm text-muted-foreground">店铺数量</div>
               </div>
             </div>
@@ -161,62 +162,85 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-b from-festival-red/5 to-festival-gold/5">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12 lg:mb-16">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-festival-red/10 border border-festival-red/20 mb-4">
-              <Calendar className="w-4 h-4 text-festival-red" />
-              <span className="text-sm font-medium text-festival-red">
-                活动时间：1月15日 - 2月15日
+      {/* Pricing Section - 突出展示免费包 */}
+      <section className="py-16 lg:py-24 relative overflow-hidden">
+        {/* 喜庆背景 */}
+        <div className="absolute inset-0 bg-gradient-to-b from-festival-red/10 via-festival-gold/5 to-festival-red/10" />
+        <div className="absolute top-10 left-10 w-40 h-40 bg-festival-gold/20 rounded-full blur-3xl" />
+        <div className="absolute bottom-10 right-10 w-56 h-56 bg-festival-red/15 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-festival-gold/30 rounded-full blur-2xl animate-float" />
+        
+        <div className="container mx-auto px-4 relative">
+          <div className="text-center mb-10">
+            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-6 shadow-lg">
+              <Calendar className="w-5 h-5" />
+              <span className="font-bold">
+                🧧 活动时间：1月15日 - 2月15日 🧧
               </span>
             </div>
-            <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
+            <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-4">
               新春<span className="text-gradient-festival">限时免费</span>大礼包
             </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              活动期间完全免费，活动结束后恢复正常价格 ¥498/月
-            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <PricingCard
-              name="新春免费包"
-              price="0"
-              originalPrice="498"
-              description="活动期间限时免费"
-              features={[
-                "2000条AI智能回复",
-                "3000个SPU商品支持",
-                "店铺数量不限",
-                "30+语言自动翻译",
-                "多平台消息聚合",
-                "7×24小时AI值守",
-              ]}
-              ctaText="立即免费领取"
-              highlighted
-              badge="新春特惠"
-              variant="festival"
-            />
-            <PricingCard
-              name="标准版"
-              price="498"
-              description="活动结束后恢复价格"
-              features={[
-                "5000条AI智能回复",
-                "10000个SPU商品支持",
-                "店铺数量不限",
-                "30+语言自动翻译",
-                "多平台消息聚合",
-                "专属客户经理",
-              ]}
-              ctaText="了解更多"
-              variant="festival"
-            />
+          {/* 突出显示的免费包卡片 */}
+          <div className="max-w-2xl mx-auto">
+            <div className="relative p-8 lg:p-10 rounded-3xl bg-gradient-to-br from-festival-red to-festival-gold text-white shadow-2xl overflow-hidden">
+              {/* 装饰图案 */}
+              <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -translate-y-1/2 translate-x-1/2" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full translate-y-1/2 -translate-x-1/2" />
+              
+              {/* 标签 */}
+              <div className="absolute -top-1 -right-1 px-6 py-2 bg-festival-gold text-festival-gold-foreground font-bold text-sm rounded-bl-2xl rounded-tr-3xl shadow-lg">
+                🎁 新春特惠
+              </div>
+
+              <div className="relative">
+                {/* 价格区域 */}
+                <div className="text-center mb-8">
+                  <p className="text-white/80 text-lg mb-2">限时免费价值</p>
+                  <div className="flex items-center justify-center gap-3 mb-2">
+                    <span className="text-2xl line-through text-white/50">¥498</span>
+                    <span className="text-6xl lg:text-7xl font-black">¥0</span>
+                  </div>
+                  <p className="text-white/70 text-sm">活动结束后恢复正常价格 ¥498/月</p>
+                </div>
+
+                {/* 功能列表 */}
+                <div className="grid grid-cols-2 gap-4 mb-8">
+                  {[
+                    { icon: "💬", label: "2000条", desc: "AI智能回复" },
+                    { icon: "📦", label: "3000个", desc: "SPU商品支持" },
+                    { icon: "🏪", label: "不限", desc: "店铺数量" },
+                    { icon: "🌍", label: "30+", desc: "语言翻译" },
+                    { icon: "🔗", label: "全平台", desc: "消息聚合" },
+                    { icon: "🤖", label: "7×24h", desc: "AI值守" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-3 p-3 rounded-xl bg-white/10 backdrop-blur-sm">
+                      <span className="text-2xl">{item.icon}</span>
+                      <div>
+                        <p className="font-bold text-lg leading-tight">{item.label}</p>
+                        <p className="text-white/70 text-sm">{item.desc}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* CTA按钮 */}
+                <Button 
+                  size="xl" 
+                  className="w-full h-16 text-xl font-bold bg-white text-festival-red hover:bg-white/90 hover:scale-105 transition-all shadow-lg"
+                >
+                  <Gift className="w-6 h-6" />
+                  立即免费领取
+                  <ArrowRight className="w-6 h-6" />
+                </Button>
+              </div>
+            </div>
           </div>
 
           {/* Trust badges */}
-          <div className="mt-12 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-8 text-sm text-muted-foreground">
             <div className="flex items-center gap-2">
               <Check className="w-5 h-5 text-success" />
               <span>无需绑定信用卡</span>
@@ -243,7 +267,7 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div className="p-6 rounded-2xl bg-card border border-border">
+            <div className="p-6 rounded-2xl bg-card border border-festival-red/20 hover:shadow-lg transition-all">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Sparkles key={i} className="w-4 h-4 text-festival-gold" />
@@ -253,7 +277,7 @@ const Index = () => {
                 "去年春节回家7天，店铺一单没丢。AI客服比我回复得还专业，客户都不知道是机器人在聊。"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-primary-foreground">
+                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-white">
                   王
                 </div>
                 <div>
@@ -262,7 +286,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-border">
+            <div className="p-6 rounded-2xl bg-card border border-festival-gold/20 hover:shadow-lg transition-all">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Sparkles key={i} className="w-4 h-4 text-festival-gold" />
@@ -272,7 +296,7 @@ const Index = () => {
                 "以前雇两个客服都忙不过来，现在一个AI就搞定了。成本降了80%，转化率还提高了30%。"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-primary-foreground">
+                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-white">
                   李
                 </div>
                 <div>
@@ -281,7 +305,7 @@ const Index = () => {
                 </div>
               </div>
             </div>
-            <div className="p-6 rounded-2xl bg-card border border-border">
+            <div className="p-6 rounded-2xl bg-card border border-festival-red/20 hover:shadow-lg transition-all">
               <div className="flex items-center gap-1 mb-4">
                 {[1, 2, 3, 4, 5].map((i) => (
                   <Sparkles key={i} className="w-4 h-4 text-festival-gold" />
@@ -291,7 +315,7 @@ const Index = () => {
                 "德国、法国、意大利的客户都能直接用母语沟通，再也不用担心语言问题了。"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-primary-foreground">
+                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-white">
                   张
                 </div>
                 <div>
