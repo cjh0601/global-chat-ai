@@ -37,7 +37,7 @@ const CTASection = ({
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-          <a href="tel:400-XXX-XXXX">
+          <a href="tel:17359196071">
             <Button variant="secondary" size="xl" className="group">
               <Phone className="w-5 h-5" />
               {primaryCta}
@@ -59,7 +59,7 @@ const CTASection = ({
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-primary-foreground/80 text-sm">
             <div className="flex items-center gap-2">
               <Phone className="w-4 h-4" />
-              <span>咨询热线：400-XXX-XXXX</span>
+              <span>咨询热线：17359196071</span>
             </div>
             <div className="flex items-center gap-2">
               <MessageCircle className="w-4 h-4" />

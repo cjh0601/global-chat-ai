@@ -158,13 +158,13 @@ const Index = () => {
                 </div>
 
                 {/* CTA按钮 - 电话咨询 */}
-                <a href="tel:400-XXX-XXXX">
+                <a href="tel:17359196071">
                   <Button size="xl" className="w-full h-16 text-xl font-bold bg-white text-festival-red hover:bg-white/90 hover:scale-105 transition-all shadow-lg">
                     <Phone className="w-6 h-6" />
                     立即电话咨询
                   </Button>
                 </a>
-                <p className="text-center text-white/80 mt-3 text-sm">咨询热线：400-XXX-XXXX</p>
+                <p className="text-center text-white/80 mt-3 text-sm">咨询热线：17359196071</p>
               </div>
             </motion.div>
           </motion.div>
@@ -325,7 +325,7 @@ const Index = () => {
             exit={{ y: 100, opacity: 0 }}
             transition={{ type: "spring", stiffness: 300, damping: 30 }}
           >
-            <a href="tel:400-XXX-XXXX">
+            <a href="tel:17359196071">
               <Button variant="festival" size="lg" className="shadow-2xl group px-8 py-6 text-lg">
                 <Phone className="w-5 h-5" />
                 立即电话咨询
