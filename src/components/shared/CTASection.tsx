@@ -22,9 +22,7 @@ const CTASection = ({
         <h2 className="text-2xl lg:text-4xl font-bold text-primary-foreground mb-4">
           {title}
         </h2>
-        <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-          {description}
-        </p>
+        
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
           <a href="tel:17359196071">
