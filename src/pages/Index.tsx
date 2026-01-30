@@ -1,11 +1,8 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import CTASection from "@/components/shared/CTASection";
 import { Button } from "@/components/ui/button";
 import { Globe, MessageSquare, Shield, Sparkles, Check, Calendar, Bot, Phone } from "lucide-react";
 import { motion } from "framer-motion";
-import lunaSpringLeft from "@/assets/luna-spring-left.png";
-import lunaSpringRight from "@/assets/luna-spring-right.png";
 
 const Index = () => {
   return (
@@ -23,53 +20,6 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
-          {/* Luna春节形象 - 左侧 */}
-          <motion.div 
-            className="hidden lg:block absolute left-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
-          >
-            <motion.img 
-              src={lunaSpringLeft} 
-              alt="Luna春节形象" 
-              className="w-full h-auto drop-shadow-2xl mix-blend-multiply"
-              animate={{ 
-                y: [0, -15, 0],
-                rotate: [-2, 2, -2]
-              }}
-              transition={{ 
-                duration: 4, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-            />
-          </motion.div>
-
-          {/* Luna春节形象 - 右侧 */}
-          <motion.div 
-            className="hidden lg:block absolute right-0 top-1/2 -translate-y-1/2 w-48 xl:w-64 z-10"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 80 }}
-          >
-            <motion.img 
-              src={lunaSpringRight} 
-              alt="Luna春节形象" 
-              className="w-full h-auto drop-shadow-2xl mix-blend-multiply"
-              animate={{ 
-                y: [0, -12, 0],
-                rotate: [2, -2, 2]
-              }}
-              transition={{ 
-                duration: 3.5, 
-                repeat: Infinity, 
-                ease: "easeInOut",
-                delay: 0.5
-              }}
-            />
-          </motion.div>
-
           <div className="text-center max-w-3xl mx-auto relative z-20">
             {/* Festival badge */}
             <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-8 animate-fade-in shadow-lg">
@@ -374,8 +324,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <CTASection title="今年春节，让AI替你值班" description="立即电话咨询，抢占春节商机" primaryCta="立即电话咨询" variant="festival" />
+      <Footer />
 
       <Footer />
 
