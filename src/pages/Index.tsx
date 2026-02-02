@@ -60,7 +60,7 @@ const Index = () => {
                   <motion.img 
                     src={robotFirecracker} 
                     alt="放鞭炮的Luna" 
-                    className="w-24 h-auto drop-shadow-xl"
+                    className="w-36 h-auto drop-shadow-xl"
                     animate={{ y: [0, -6, 0], rotate: [-2, 2, -2] }}
                     transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                   />
@@ -82,7 +82,7 @@ const Index = () => {
                   <motion.img 
                     src={robotHongbao} 
                     alt="发红包的Luna" 
-                    className="w-24 h-auto drop-shadow-xl"
+                    className="w-36 h-auto drop-shadow-xl"
                     animate={{ y: [0, -6, 0] }}
                     transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
                   />
