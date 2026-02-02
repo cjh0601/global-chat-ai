@@ -13,6 +13,9 @@ import globalConnection from "@/assets/global-connection.png";
 import aiMultilingualChat from "@/assets/ai-multilingual-chat.png";
 import ecommerceGlobal from "@/assets/ecommerce-global.png";
 import ai247Service from "@/assets/ai-24-7-service-luna.png";
+import avatarWang from "@/assets/avatar-wang.png";
+import avatarLi from "@/assets/avatar-li.png";
+import avatarZhang from "@/assets/avatar-zhang.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
@@ -404,9 +407,11 @@ const Index = () => {
                 "去年春节回家7天，店铺一单没丢。AI客服比我回复得还专业，客户都不知道是机器人在聊。"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-white">
-                  王
-                </div>
+                <img 
+                  src={avatarWang} 
+                  alt="王老板" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-medium text-foreground">王老板</p>
                   <p className="text-sm text-muted-foreground">Shopee卖家 · 深圳</p>
@@ -421,9 +426,11 @@ const Index = () => {
                 "以前雇两个客服都忙不过来，现在一个AI就搞定了。成本降了80%，转化率还提高了30%。"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-white">
-                  李
-                </div>
+                <img 
+                  src={avatarLi} 
+                  alt="李总" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-medium text-foreground">李总</p>
                   <p className="text-sm text-muted-foreground">DHgate卖家 · 杭州</p>
@@ -438,9 +445,11 @@ const Index = () => {
                 "德国、法国、意大利的客户都能直接用母语沟通，再也不用担心语言问题了。"
               </p>
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full gradient-festival flex items-center justify-center text-sm font-bold text-white">
-                  张
-                </div>
+                <img 
+                  src={avatarZhang} 
+                  alt="张经理" 
+                  className="w-10 h-10 rounded-full object-cover"
+                />
                 <div>
                   <p className="font-medium text-foreground">张经理</p>
                   <p className="text-sm text-muted-foreground">Lazada卖家 · 广州</p>
