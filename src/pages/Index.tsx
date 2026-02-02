@@ -67,10 +67,7 @@ const Index = () => {
 
           <div className="text-center max-w-3xl mx-auto relative z-20">
             {/* Festival badge */}
-            <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-festival-red text-white mb-8 animate-fade-in shadow-lg">
-              <Sparkles className="w-5 h-5 text-festival-gold" />
-              <span className="font-bold">🧧 2026新春限时活动 🧧</span>
-            </div>
+            
 
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-8 animate-slide-up leading-tight">
               别人过年你赚钱
