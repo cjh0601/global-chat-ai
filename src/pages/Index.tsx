@@ -261,7 +261,7 @@ const Index = () => {
       <section className="py-16 lg:py-24 relative">
         {/* 发红包机器人 - 左侧装饰 */}
         <motion.div 
-          className="hidden xl:block absolute left-4 2xl:left-16 top-1/4 z-10"
+          className="hidden xl:block absolute left-4 2xl:left-16 top-8 z-10"
           initial={{ opacity: 0, x: -50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
