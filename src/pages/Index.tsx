@@ -16,6 +16,7 @@ import ai247Service from "@/assets/ai-24-7-service-luna.png";
 import avatarWang from "@/assets/avatar-wang.png";
 import avatarLi from "@/assets/avatar-li.png";
 import avatarZhang from "@/assets/avatar-zhang.png";
+import robotLionGong from "@/assets/robot-lion-gong.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
@@ -389,20 +390,28 @@ const Index = () => {
 
       {/* Testimonials */}
       <section className="py-16 lg:py-24 relative">
+        {/* 舞狮敲锣机器人 - 右侧装饰 */}
+        <motion.div 
+          className="hidden xl:block absolute right-4 2xl:right-16 top-8 z-10"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.img 
+            src={robotLionGong} 
+            alt="舞狮敲锣Luna" 
+            className="w-48 2xl:w-56 h-auto drop-shadow-xl"
+            animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <div className="flex items-center justify-center gap-4">
-              <h2 className="text-2xl lg:text-4xl font-bold text-foreground">
-                他们都在用跨境聚聊过春节
-              </h2>
-              <motion.img 
-                src={lunaSpringRight} 
-                alt="春节Luna" 
-                className="hidden lg:block w-20 h-auto"
-                animate={{ y: [0, -4, 0], rotate: [-1, 1, -1] }}
-                transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-              />
-            </div>
+            <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
+              他们都在用跨境聚聊过春节
+            </h2>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
