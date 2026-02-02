@@ -259,21 +259,29 @@ const Index = () => {
 
       {/* 功能介绍区 - 合并后的板块 */}
       <section className="py-16 lg:py-24 relative">
+        {/* 发红包机器人 - 左侧装饰 */}
+        <motion.div 
+          className="hidden xl:block absolute left-4 2xl:left-16 top-1/2 -translate-y-1/2 z-10"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.img 
+            src={robotHongbao} 
+            alt="发红包的Luna" 
+            className="w-48 2xl:w-56 h-auto drop-shadow-xl"
+            animate={{ y: [0, -8, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
-            <div className="flex items-center justify-center gap-4">
-              <motion.img 
-                src={robotHongbao} 
-                alt="发红包的Luna" 
-                className="hidden lg:block w-20 h-auto"
-                animate={{ y: [0, -4, 0] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <h2 className="text-2xl lg:text-4xl font-bold text-foreground">
-                跨境聚聊AI，<span className="text-gradient-festival">你的全球智能客服</span>
-              </h2>
-            </div>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto mt-4">
+            <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
+              跨境聚聊AI，<span className="text-gradient-festival">你的全球智能客服</span>
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               支持 DHgate、Shopee、Lazada、Ozon、Daraz 五大平台 · 129+语言实时翻译
             </p>
           </div>
