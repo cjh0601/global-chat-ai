@@ -12,7 +12,7 @@ import robotHongbao from "@/assets/robot-hongbao.png";
 import globalConnection from "@/assets/global-connection.png";
 import aiMultilingualChat from "@/assets/ai-multilingual-chat.png";
 import ecommerceGlobal from "@/assets/ecommerce-global.png";
-import ai247Service from "@/assets/ai-24-7-service.png";
+import ai247Service from "@/assets/ai-24-7-service-luna.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
