@@ -24,38 +24,6 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
-          {/* 机器人形象 - 左侧 (放鞭炮) */}
-          <motion.div 
-            className="hidden lg:block absolute left-0 xl:left-4 top-1/2 -translate-y-1/2 z-10"
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
-          >
-            <motion.img 
-              src={robotFirecracker} 
-              alt="放鞭炮的Luna" 
-              className="w-28 xl:w-36 h-auto drop-shadow-2xl"
-              animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </motion.div>
-
-          {/* 机器人形象 - 右侧 (发红包) */}
-          <motion.div 
-            className="hidden lg:block absolute right-0 xl:right-4 top-1/2 -translate-y-1/2 z-10"
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8, delay: 0.5, type: "spring", stiffness: 80 }}
-          >
-            <motion.img 
-              src={robotHongbao} 
-              alt="发红包的Luna" 
-              className="w-36 xl:w-48 h-auto drop-shadow-2xl"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-            />
-          </motion.div>
-
           <div className="text-center max-w-3xl mx-auto relative z-20">
             {/* Festival badge */}
             
@@ -72,11 +40,48 @@ const Index = () => {
               <p className="text-xl lg:text-2xl text-foreground/90 font-medium">
                 部署跨境聚聊AI客服
               </p>
-              <p className="text-lg text-muted-foreground max-w-xl mx-auto leading-relaxed">
-                自动承接全球询盘、精准推荐、智能催付
-                <br />
-                将节假日流量转化为实实在在的订单与收入
-              </p>
+              
+              {/* 文案区域 - 带两侧机器人 */}
+              <div className="relative flex items-center justify-center gap-4">
+                {/* 左侧机器人 - 放鞭炮 */}
+                <motion.div 
+                  className="hidden lg:block flex-shrink-0"
+                  initial={{ opacity: 0, x: -30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.3 }}
+                >
+                  <motion.img 
+                    src={robotFirecracker} 
+                    alt="放鞭炮的Luna" 
+                    className="w-24 h-auto drop-shadow-xl"
+                    animate={{ y: [0, -6, 0], rotate: [-2, 2, -2] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </motion.div>
+
+                <p className="text-lg text-muted-foreground max-w-xl leading-relaxed">
+                  自动承接全球询盘、精准推荐、智能催付
+                  <br />
+                  将节假日流量转化为实实在在的订单与收入
+                </p>
+
+                {/* 右侧机器人 - 发红包 */}
+                <motion.div 
+                  className="hidden lg:block flex-shrink-0"
+                  initial={{ opacity: 0, x: 30 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 }}
+                >
+                  <motion.img 
+                    src={robotHongbao} 
+                    alt="发红包的Luna" 
+                    className="w-24 h-auto drop-shadow-xl"
+                    animate={{ y: [0, -6, 0] }}
+                    transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+                  />
+                </motion.div>
+              </div>
+
               <p className="text-lg text-festival-red font-semibold">让跨境聚聊AI为你创造"春节利润"<br />
                 ​
               </p>
