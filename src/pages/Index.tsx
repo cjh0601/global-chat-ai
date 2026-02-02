@@ -54,15 +54,7 @@ const Index = () => {
           type: "spring",
           stiffness: 80
         }}>
-            <motion.img src={lunaSpringRight} alt="Luna新春形象" className="w-full h-auto drop-shadow-2xl" animate={{
-            y: [0, -10, 0],
-            rotate: [2, -2, 2]
-          }} transition={{
-            duration: 2.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 0.3
-          }} />
+            
           </motion.div>
 
           <div className="text-center max-w-3xl mx-auto relative z-20">
