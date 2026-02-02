@@ -6,6 +6,9 @@ import { Globe, MessageSquare, Shield, Sparkles, Check, Calendar, Bot, Phone } f
 import { motion } from "framer-motion";
 import lunaSpringLeft from "@/assets/luna-spring-left.png";
 import lunaSpringRight from "@/assets/luna-spring-right.png";
+import robotFirecracker from "@/assets/robot-firecracker.png";
+import robotGong from "@/assets/robot-gong.png";
+import robotHongbao from "@/assets/robot-hongbao.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
@@ -90,6 +93,30 @@ const Index = () => {
       <section className="py-8 lg:py-12 relative">
         <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-festival-gold/20 rounded-full blur-2xl animate-float" />
         
+        {/* 放鞭炮的机器人 - 装饰在价格卡片区域 */}
+        <motion.div 
+          className="hidden xl:block absolute left-8 top-1/2 -translate-y-1/2 w-32 z-10"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.img 
+            src={robotFirecracker} 
+            alt="放鞭炮的Luna" 
+            className="w-full h-auto drop-shadow-xl"
+            animate={{ 
+              y: [0, -8, 0],
+              rotate: [-3, 3, -3]
+            }}
+            transition={{ 
+              duration: 2,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.div>
+
         <div className="container mx-auto px-4 relative">
           <motion.div className="text-center mb-8" initial={{
           opacity: 0,
@@ -249,7 +276,31 @@ const Index = () => {
       </section>
 
       {/* 功能介绍区 - 合并后的板块 */}
-      <section className="py-16 lg:py-24 relative">
+      <section className="py-16 lg:py-24 relative overflow-hidden">
+        {/* 敲锣机器人 - 右侧装饰 */}
+        <motion.div 
+          className="hidden lg:block absolute right-0 top-20 w-36 z-10"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          <motion.img 
+            src={robotGong} 
+            alt="敲锣的Luna" 
+            className="w-full h-auto drop-shadow-xl"
+            animate={{ 
+              scale: [1, 1.05, 1],
+              rotate: [0, 2, 0]
+            }}
+            transition={{ 
+              duration: 1.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.div>
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
@@ -294,7 +345,30 @@ const Index = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-16 lg:py-24 relative">
+      <section className="py-16 lg:py-24 relative overflow-hidden">
+        {/* 发红包机器人 - 左侧装饰 */}
+        <motion.div 
+          className="hidden lg:block absolute left-0 bottom-20 w-40 z-10"
+          initial={{ opacity: 0, x: -50, scale: 0.9 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3, type: "spring" }}
+        >
+          <motion.img 
+            src={robotHongbao} 
+            alt="发红包的Luna" 
+            className="w-full h-auto drop-shadow-xl"
+            animate={{ 
+              y: [0, -10, 0],
+            }}
+            transition={{ 
+              duration: 2.5,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+          />
+        </motion.div>
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
