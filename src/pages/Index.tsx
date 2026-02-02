@@ -24,29 +24,20 @@ const Index = () => {
       {/* Hero Section */}
       <section className="relative pt-28 lg:pt-36 pb-12 lg:pb-16">
         <div className="container mx-auto px-4 relative">
-          {/* 机器人形象 - 左侧 (放鞭炮 + 敲锣) */}
+          {/* 机器人形象 - 左侧 (放鞭炮) */}
           <motion.div 
             className="hidden lg:block absolute left-0 xl:left-4 top-1/2 -translate-y-1/2 z-10"
             initial={{ opacity: 0, x: -100 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.3, type: "spring", stiffness: 80 }}
           >
-            <div className="flex flex-col gap-4">
-              <motion.img 
-                src={robotFirecracker} 
-                alt="放鞭炮的Luna" 
-                className="w-28 xl:w-36 h-auto drop-shadow-2xl"
-                animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }}
-                transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
-              />
-              <motion.img 
-                src={robotGong} 
-                alt="敲锣的Luna" 
-                className="w-24 xl:w-32 h-auto drop-shadow-2xl ml-4"
-                animate={{ scale: [1, 1.05, 1] }}
-                transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-              />
-            </div>
+            <motion.img 
+              src={robotFirecracker} 
+              alt="放鞭炮的Luna" 
+              className="w-28 xl:w-36 h-auto drop-shadow-2xl"
+              animate={{ y: [0, -8, 0], rotate: [-2, 2, -2] }}
+              transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            />
           </motion.div>
 
           {/* 机器人形象 - 右侧 (发红包) */}
@@ -97,6 +88,23 @@ const Index = () => {
       {/* Pricing Section - 限时免费包（最醒目位置） */}
       <section className="py-8 lg:py-12 relative">
         <div className="absolute top-1/2 left-1/4 w-20 h-20 bg-festival-gold/20 rounded-full blur-2xl animate-float" />
+
+        {/* 敲锣机器人 - 价格卡片旁边 */}
+        <motion.div 
+          className="hidden xl:block absolute right-4 2xl:right-16 top-1/2 -translate-y-1/2 z-10"
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <motion.img 
+            src={robotGong} 
+            alt="敲锣的Luna" 
+            className="w-32 2xl:w-40 h-auto drop-shadow-xl"
+            animate={{ scale: [1, 1.05, 1] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
 
         <div className="container mx-auto px-4 relative">
           <motion.div className="text-center mb-8" initial={{
