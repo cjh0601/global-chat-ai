@@ -259,6 +259,23 @@ const Index = () => {
 
       {/* 功能介绍区 - 合并后的板块 */}
       <section className="py-16 lg:py-24 relative">
+        {/* 发红包机器人 - 功能介绍区左侧 */}
+        <motion.div 
+          className="hidden xl:block absolute left-4 2xl:left-16 top-1/3 z-10"
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
+          <motion.img 
+            src={robotHongbao} 
+            alt="发红包的Luna" 
+            className="w-40 2xl:w-48 h-auto drop-shadow-xl"
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
+
         <div className="container mx-auto px-4">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-2xl lg:text-4xl font-bold text-foreground mb-4">
@@ -372,20 +389,20 @@ const Index = () => {
 
       {/* Testimonials */}
       <section className="py-16 lg:py-24 relative">
-        {/* 发红包机器人 - 客户评价区域左侧 */}
+        {/* 春节机器人 - 客户评价区右侧 */}
         <motion.div 
-          className="hidden xl:block absolute left-4 2xl:left-16 top-1/2 -translate-y-1/2 z-10"
-          initial={{ opacity: 0, x: -50 }}
+          className="hidden xl:block absolute right-4 2xl:right-16 top-1/3 z-10"
+          initial={{ opacity: 0, x: 50 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.3 }}
         >
           <motion.img 
-            src={robotHongbao} 
-            alt="发红包的Luna" 
+            src={lunaSpringRight} 
+            alt="春节Luna" 
             className="w-40 2xl:w-48 h-auto drop-shadow-xl"
-            animate={{ y: [0, -6, 0] }}
-            transition={{ duration: 2.5, repeat: Infinity, ease: "easeInOut" }}
+            animate={{ y: [0, -6, 0], rotate: [-1, 1, -1] }}
+            transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
           />
         </motion.div>
 
