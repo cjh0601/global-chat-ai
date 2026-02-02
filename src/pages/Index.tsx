@@ -9,6 +9,10 @@ import lunaSpringRight from "@/assets/luna-spring-right.png";
 import robotFirecracker from "@/assets/robot-firecracker.png";
 import robotGong from "@/assets/robot-gong.png";
 import robotHongbao from "@/assets/robot-hongbao.png";
+import globalConnection from "@/assets/global-connection.png";
+import aiMultilingualChat from "@/assets/ai-multilingual-chat.png";
+import ecommerceGlobal from "@/assets/ecommerce-global.png";
+import ai247Service from "@/assets/ai-24-7-service.png";
 const Index = () => {
   return <div className="min-h-screen bg-gradient-to-b from-red-50 via-orange-50/50 to-amber-50/30 relative overflow-hidden">
       {/* 全局装饰元素 */}
@@ -281,35 +285,103 @@ const Index = () => {
             </p>
           </div>
 
+          {/* 主要展示图片区域 */}
+          <div className="grid lg:grid-cols-2 gap-8 mb-12">
+            <motion.div 
+              className="relative rounded-2xl overflow-hidden shadow-xl group"
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6 }}
+            >
+              <img 
+                src={ai247Service} 
+                alt="AI 24/7 智能客服" 
+                className="w-full h-64 lg:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <h3 className="text-xl font-bold mb-1">7×24小时AI值守</h3>
+                  <p className="text-white/80 text-sm">春节期间也能自动接待全球客户</p>
+                </div>
+              </div>
+            </motion.div>
+            
+            <motion.div 
+              className="relative rounded-2xl overflow-hidden shadow-xl group"
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
+              <img 
+                src={globalConnection} 
+                alt="全球连接" 
+                className="w-full h-64 lg:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6">
+                <div className="text-white">
+                  <h3 className="text-xl font-bold mb-1">连接全球买家</h3>
+                  <p className="text-white/80 text-sm">覆盖200+国家和地区的跨境电商网络</p>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* 功能卡片 */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all">
+            <motion.div 
+              className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4 }}
+            >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Bot className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">AI智能值守</h3>
               <p className="text-sm text-muted-foreground">7×24小时自动回复，秒级响应客户咨询，节假日也不掉线</p>
-            </div>
-            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all">
+            </motion.div>
+            <motion.div 
+              className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.1 }}
+            >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Globe className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">129+语言支持</h3>
               <p className="text-sm text-muted-foreground">支持129+语言自动翻译，与全球客户无障碍沟通</p>
-            </div>
-            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all">
+            </motion.div>
+            <motion.div 
+              className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-red/10 text-center group hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.2 }}
+            >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <MessageSquare className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">5大平台聚合</h3>
               <p className="text-sm text-muted-foreground">DHgate、Shopee、Lazada、Ozon、Daraz 消息统一管理</p>
-            </div>
-            <div className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all">
+            </motion.div>
+            <motion.div 
+              className="p-6 rounded-2xl bg-white/70 backdrop-blur-sm border border-festival-gold/10 text-center group hover:shadow-lg transition-all"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.3 }}
+            >
               <div className="w-16 h-16 mx-auto mb-4 rounded-full gradient-festival flex items-center justify-center group-hover:scale-110 transition-transform">
                 <Shield className="w-8 h-8 text-primary-foreground" />
               </div>
               <h3 className="font-bold text-foreground mb-2">安全可靠</h3>
               <p className="text-sm text-muted-foreground">企业级数据加密，店铺信息安全无忧</p>
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
